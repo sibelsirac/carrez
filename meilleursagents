@@ -1,0 +1,14 @@
+{
+{
+
+	"type": "string",
+	"price":"integer",
+	"piece":"integer",
+	"town":"string",
+	"surface":"integer",
+	
+	},
+	"required": ["price", "surface","town","type","piece"]
+	
+	
+}

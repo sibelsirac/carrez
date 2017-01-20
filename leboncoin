@@ -1,0 +1,15 @@
+{
+{
+	"title": "string",
+	"type": "string",
+	"price":"integer",
+	"piece":"integer",
+	"town":"string",
+	"surface":"integer",
+	"GES":"string",
+	"classe_energie":"string"
+	},
+	"required": ["price", "surface","town","type"]
+	
+	
+}
