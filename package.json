@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/sibelsirac/carrez/issues"
   },
-  "homepage": "https://github.com/sibelsirac/carrez#readme"
+  "homepage": "https://github.com/sibelsirac/carrez#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {}
 }

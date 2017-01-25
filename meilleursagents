@@ -2,13 +2,12 @@
 {
 
 	"type": "string",
-	"price":"integer",
-	"piece":"integer",
-	"town":"string",
-	"surface":"integer",
+
+	"town":"string"
+
 	
 	},
-	"required": ["price", "surface","town","type","piece"]
+	"required": ["town","type"]
 	
 	
 }

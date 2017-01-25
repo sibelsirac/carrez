@@ -7,8 +7,8 @@ console.log('Listening!');
 
 
 var express = require('express');
-var app = express();
 
+var app = express();
 app.get('/', function(req, res){
     res.send('hello world');
 });
@@ -16,4 +16,5 @@ app.get('/', function(req, res){
 app.get('/test', function(req, res){
     res.send('nous sommes dans test');
 });
+
 app.listen(3000);
