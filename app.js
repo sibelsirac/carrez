@@ -10,11 +10,9 @@ var bodyParser = require('body-parser');
    //var price, good_deal;
  //var json = { price : "", good_deal : ""};
  var app = express();
-app.get('/', function(req, res){
-    res.send(jsonb.good_deal);
-});
+
 app.use(express.static(path.join(__dirname, 'public')));
-app.get('/test', function(req, res){
+app.get('/', function(req, res){
     res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 });
 app.use(bodyParser.urlencoded({ extended: true })); 
