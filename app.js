@@ -10,7 +10,6 @@ var bodyParser = require('body-parser');
    //var price, good_deal;
  //var json = { price : "", good_deal : ""};
  var app = express();
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res){
     res.sendFile('index.html', {root: path.join(__dirname, 'public')});
@@ -19,14 +18,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/myaction', function(req, res) {
 
 
-
+//execution du module leboncoin avec attente du callback 
+console.log('form ' + req.body.name);
   lbc( req.body.name,function(messages) {
         console.log(messages);
-		var json = require('./output.json');
+		var fs = require('fs');
+var json = JSON.parse(fs.readFileSync('./output.json', 'utf8'));
 console.log(json.price);
+ console.log("ville json"+json.ville);
+//execution du module meilleurs agents avec attente du callback
 var result=ma(json.ville, json.code, json.type,json.price,json.surface,function(messages) {
         console.log(messages);
-		var jsonb = require('./meilleurs.json');
+		var fsb = require('fs');
+		var jsonb =JSON.parse(fsb.readFileSync('./meilleurs.json', 'utf8'));
 		
 app.get('/res', function(req, res){
     res.send(jsonb.good_deal);
